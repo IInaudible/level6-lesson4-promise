@@ -54,7 +54,19 @@
 
 // ⬇⬇⬇⬇⬇⬇ Assignment Code Goes Here ⬇⬇⬇⬇⬇⬇
 
+const result = fetchConcertPromise();
 
+result.then((message) => {
+	console.log(message);
+}).catch((message) => {
+	console.log(message);
+	let second = fetchConcertPromise()
+	second.then((message) => {
+		console.log(message);
+	}).catch((message) => {
+		console.log(message);
+	})
+})
 
 // ⬆⬆⬆⬆⬆⬆ Assignment Code Goes Here ⬆⬆⬆⬆⬆⬆
 
